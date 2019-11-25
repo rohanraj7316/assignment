@@ -2,8 +2,14 @@
 
 ## Start the app
 
-Create image using 
+Create docker image.
 
 ```
 docker build -t assignment .
+```
+
+Create container.
+
+```
+docker run -d assignment
 ```

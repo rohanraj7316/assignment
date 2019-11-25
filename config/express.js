@@ -4,9 +4,6 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const compress = require('compression');
 const cors = require('cors');
-// const httpStatus = require('http-status');
-// const expressWinston = require('express-winston');
-// const expressValidation = require('express-validation');
 const helmet = require('helmet');
 
 const config = require('./config');
@@ -33,21 +30,5 @@ app.use(cors());
 
 // mount all routes on '/' path
 app.use('/', router);
-
-app.use((err, req, res, next) => {
-
-    // if (err instanceof expressValidation.ValidationError) {
-
-    // } else if () {
-
-    // }
-
-    return next(err);
-});
-
-// // catch 404 and forward to error handler.
-// app.use((req, res, next) => {
-
-// });
 
 module.exports = app;

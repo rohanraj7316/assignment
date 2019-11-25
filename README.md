@@ -17,6 +17,7 @@ docker run -d assignment
 ## API Docs
 
 ### Health App: /GET /health
+
 ### Create User: /POST /user
     
     header: {
@@ -44,7 +45,7 @@ docker run -d assignment
 
 ### Delete User: /DELETE /user
 
-header: {
+    header: {
         Content-Type: "application/json"
     }
     body: {

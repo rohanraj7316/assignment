@@ -36,7 +36,7 @@ const config = {
     env: envVars.NODE_ENV,
     port: envVars.PORT,
     mongo: {
-        uri: "mongodb+srv://" + envVars.MONGO_DB_USER + ":" + envVars.MONGO_DB_PASS +
+        uri: "mongodb+srv://" + envVars.MONGO_DB_USER + ":" + encodeURIComponent(envVars.MONGO_DB_PASS) +
             "@" + envVars.MONGO_HOST +"/" + envVars.MONGO_DB +"?retryWrites=true&w=majority"
     }
 };

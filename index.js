@@ -8,10 +8,12 @@ mongoose.Promise = Promise;
 
 mongoose.connect(config.mongo.uri, {
     useNewUrlParser: true,
-    // useUnifiedTopology: true
+    useUnifiedTopology: true,
+    autoReconnect: true
 });
 mongoose.connection.on('error', (err) => {
-    throw new Error(`unable to connect to db: ${config.mongo.uri} with error: ${err}`);
+    const error = new Error(`unable to connect to db: ${config.mongo.uri} with error: ${err}`);
+    util.log(error);
 });
 
 app.listen(config.port, () => {
